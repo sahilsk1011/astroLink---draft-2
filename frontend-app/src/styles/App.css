@@ -1,0 +1,77 @@
+.auth-form-container {
+    max-width: 100%;
+  }
+  
+  .auth-form-container h2 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  .auth-links {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
+  
+  .btn-block {
+    display: block;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+  
+  .alert {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1.25rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+  }
+  
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+  }
+  
+  .alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+  }
+
+/* Dashboard Styles */
+.dashboard-stats .card {
+    transition: all 0.3s ease;
+  }
+  
+  .dashboard-stats .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-value {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+  
+  .request-card {
+    transition: all 0.2s ease;
+  }
+  
+  .request-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Tab styling */
+  .nav-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: #007bff;
+    font-weight: 600;
+  }

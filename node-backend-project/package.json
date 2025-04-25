@@ -1,0 +1,24 @@
+{
+  "name": "astro-link",
+  "version": "1.0.0",
+  "description": "Astrologer consultation platform",
+  "main": "index.js",
+  "scripts": {
+    "start": "node backend/src/index.js",
+    "dev": "nodemon backend/src/index.js",
+    "client": "cd frontend && npm start",
+    "dev:full": "concurrently \"npm run dev\" \"npm run client\""
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "dotenv": "^8.2.0",
+    "cors": "^2.8.5",
+    "body-parser": "^1.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "Your Name",
+  "license": "ISC"
+}
