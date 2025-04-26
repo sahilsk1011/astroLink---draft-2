@@ -1,15 +1,15 @@
-// app.js
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const helmet = require('helmet');
 const morgan = require('morgan');
 const path = require('path');
-const rateLimit = require('express-rate-limit');
+const rateLimit = require('express-rate-limit'); // Only declare once
 require('dotenv').config();
+const errorHandler = require('./middleware/errorHandler.js');
 
-// Import middleware
-const errorHandler = require('./middleware/errorHandler');
+// backend/src/index.js
+require('./server');
 
 // Import routes
 const authRoutes = require('./routes/authRoutes');

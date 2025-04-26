@@ -3,7 +3,6 @@ const { body } = require('express-validator');
 const clientController = require('../controllers/clientController');
 const authMiddleware = require('../middleware/auth');
 const roleMiddleware = require('../middleware/role');
-
 const router = express.Router();
 
 // Apply authentication middleware to all client routes

@@ -3,9 +3,9 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const mongoose = require('mongoose');
-const ChatChannel = require('../models/ChatChannel');
-const encryptionService = require('../services/encryptionService');
-const { errorResponse, successResponse } = require('../utils/responseHandler');
+const ChatChannel = require('../models/ChatChannel.js');
+const encryptionService = require('../services/encryptionService.js');
+const { errorResponse, successResponse } = require('../utils/responseHandler.js');
 
 // Configure multer storage
 const storage = multer.diskStorage({

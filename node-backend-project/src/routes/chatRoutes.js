@@ -1,10 +1,10 @@
 // backend/src/routes/chatRoutes.js
 const express = require('express');
 const { body } = require('express-validator');
-const chatController = require('../controllers/chatController');
-const authMiddleware = require('../middleware/auth');
-const upload = require('../middleware/fileUpload');
-const { authenticate } = require('../middleware/authMiddleware');
+const chatController = require('../controllers/chatController.js');
+const authMiddleware = require('../middleware/auth.js');
+const upload = require('../middleware/fileUpload.js');
+const { authenticate } = require('../middleware/authMiddleware.js');
 
 const router = express.Router();
 

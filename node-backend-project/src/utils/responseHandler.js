@@ -1,38 +1,40 @@
+// src/utils/responseHandler.js
+
 /**
- * Standard error response
- * @param {Object} res - Express response object
- * @param {Number} statusCode - HTTP status code
- * @param {String} message - Error message
- * @param {Object} details - Additional error details (optional)
+ * Send success response
+ * @param {object} res - Express response object
+ * @param {number} statusCode - HTTP status code
+ * @param {string} message - Success message
+ * @param {object} data - Response data
  */
-exports.errorResponse = (res, statusCode, message, details = null) => {
+exports.successResponse = (res, statusCode = 200, message = 'Success', data = null) => {
   const response = {
-    success: false,
+    status: 'success',
     message
   };
   
-  if (details) {
-    response.details = details;
+  if (data !== null) {
+    response.data = data;
   }
   
   return res.status(statusCode).json(response);
 };
 
 /**
- * Standard success response
- * @param {Object} res - Express response object
- * @param {Number} statusCode - HTTP status code
- * @param {String} message - Success message
- * @param {Object} data - Response data (optional)
+ * Send error response
+ * @param {object} res - Express response object
+ * @param {number} statusCode - HTTP status code
+ * @param {string} message - Error message
+ * @param {object} errors - Validation errors
  */
-exports.successResponse = (res, statusCode, message, data = null) => {
+exports.errorResponse = (res, statusCode = 400, message = 'Error', errors = null) => {
   const response = {
-    success: true,
+    status: 'error',
     message
   };
   
-  if (data) {
-    response.data = data;
+  if (errors !== null) {
+    response.errors = errors;
   }
   
   return res.status(statusCode).json(response);

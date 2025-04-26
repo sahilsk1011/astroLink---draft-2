@@ -1,8 +1,8 @@
-// backend/src/services/encryptionService.js
+// src/services/encryptionService.js
 const crypto = require('crypto');
 
 // Get encryption key from environment variables
-const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY || 'your-fallback-32-char-encryption-key'; // Must be 32 bytes
+const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY || 'default-32-char-encryption-key-here';
 const IV_LENGTH = 16; // For AES, this is always 16
 
 /**
